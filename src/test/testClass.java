@@ -45,30 +45,30 @@ public class testClass {
 //
     public static void main(String[] args) {
 
-        byte[] b = {0,0,1,1,1,0,0,0,1};
-        Map<String,Integer> codes = new HashMap();
-        ArrayList<Pair<Integer,Integer>> array = new ArrayList<>();
-        int arrIndex=0;
-        int k=0;
-        codes.put(String.valueOf(b[k++]),arrIndex);
-        array.add(arrIndex++,new Pair(b[k],-1));
-        for (; k<b.length; k++){
-            int pointer=-1;
-            String current = String.valueOf(b[k]);
-            while (codes.containsKey(current) && k<b.length-1){ // 0 00 01 010
-                pointer=codes.get(current);
-                k++;
-                current+=String.valueOf(b[k]);
-            }
-            if (codes.containsKey(current) && k==b.length-1) {
-                array.add(arrIndex, new Pair(2, codes.get(current)));
-                codes.put(current,arrIndex);
-            }
-            else{
-                array.add(arrIndex,new Pair(b[k],pointer));
-                codes.put(current,arrIndex++);
-            }
-        }
+//        byte[] b = {0,0,1,1,1,0,0,0,2};
+//        Map<String,Integer> codes = new HashMap();
+//        ArrayList<Pair<Integer,Integer>> array = new ArrayList<>();
+//        int arrIndex=0;
+//        int k=0;
+//        codes.put(String.valueOf(b[k++]),arrIndex);
+//        array.add(arrIndex++,new Pair(b[k],-1));
+//        for (; k<b.length; k++){
+//            int pointer=-1;
+//            String current = String.valueOf(b[k]);
+//            while (codes.containsKey(current) && k<b.length-1){ // 0 00 01 010
+//                pointer=codes.get(current);
+//                k++;
+//                current+=String.valueOf(b[k]);
+//            }
+//            if (codes.containsKey(current) && k==b.length-1) {
+//                array.add(arrIndex, new Pair(2, codes.get(current)));
+//                codes.put(current,arrIndex);
+//            }
+//            else{
+//                array.add(arrIndex,new Pair(b[k],pointer));
+//                codes.put(current,arrIndex++);
+//            }
+//        }
 
 //        byte b = 12;
 //        System.out.println(String.valueOf(b));
